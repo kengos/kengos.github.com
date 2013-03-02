@@ -1,0 +1,5 @@
+safe: true
+source: .
+desitination: .
+lsi: false
+pygments: true
