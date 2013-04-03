@@ -4,39 +4,44 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ page.title }}</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <link rel="stylesheet" href="/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/font-awesome.min.css">
 <!--[if IE 7]>
 <link rel="stylesheet" href="/css/font-awesome-ie7.min.css">
 <![endif]-->
-
-<style>
-  body {
-    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-  }
-</style>
-<link href="/css/bootstrap-responsive.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+{% for js in page.js_files %}
+<script src="/js/{{ js }}"></script>
+{% endfor %}
 </head>
 <body>
-
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container-fluid">
       <div class="nav-collapse collapse">
         <ul class="nav">
-          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/posts.html">Posts</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
   </div>
 </div>
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span10">
+<div id="wrapper">
+  <div id="main" class="container-fluid">
+    <div class="row-fluid">
 {{ content }}
     </div>
   </div>
+  <div id="push"></div>
 </div>
-<script src="js/bootstrap.min.js"></script>
+<footer id="footer">
+  <div class="container-fluid">
+    <p>Copyright (c) {{ site.author.name }} 2013 All rights reserved.</p>
+  </div>
+</footer>
+<script src="/js/bootstrap.min.js"></script>
 </body>
 </html>

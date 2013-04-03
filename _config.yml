@@ -1,5 +1,6 @@
-safe: true
+auto: true
+server: true
 source: .
 desitination: .
-lsi: false
-pygments: true
+author:
+  name: kengos
