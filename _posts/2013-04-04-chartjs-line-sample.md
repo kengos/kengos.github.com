@@ -1,16 +1,11 @@
 ---
-layout: default
+layout: posts
 title: Chart.js line sample
 js_files: [Chart.min.js]
 tags: [javascript]
 ---
 <h3>
   <a href="https://github.com/nnnick/Chart.js" target="_blank">Chart.js</a> Option sample
-  <div class="pull-right">
-  {% for tag in page.tags %}
-  <span class="label label-important">{{ tag }}</span>
-  {% endfor %}
-  </div>
 </h3>
 <div class="row-fluid">
   <div class="span9">
