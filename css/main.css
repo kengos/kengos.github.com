@@ -25,6 +25,10 @@ body { height: 100%; margin: 0; padding: 0; }
 }
 
 @media (max-width: 767px) {
+  #main { padding-top: 0; }
+  .pull-right { float: none; }
+  h2 { font-size: 20px; line-height: 2.3em; clear: both; }
+  h3 { font-size: 20px; text-decoration: underline; }
   #footer {
     margin-left: -20px;
     margin-right: -20px;

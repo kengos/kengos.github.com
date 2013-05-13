@@ -13,20 +13,23 @@
 <link rel="stylesheet" href="/css/main.css">
 <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
 <link rel="author" href="https://plus.google.com/102187337938024275663/posts">
+<meta name="google-site-verification" content="0lvnSNpPQpx5PVeFdlOeEGWG4ayedwnXKG3OcQKp_Ys">
 <meta property="og:title" content="そのABテスト正しいですか?">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://kengos.jp/2013/05/13/ab-test-1.html">
 <meta property="og:site_name" content="kengos.jp">
 <meta property="og:locale" content="ja">
 
+<!-- ga -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-40855862-1', 'kengos.jp');
+  ga('create', 'UA-40855269-1', 'kengos.jp');
   ga('send', 'pageview');
+
 </script>
 </head>
 <body>
@@ -41,6 +44,11 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container-fluid">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
       <div class="nav-collapse collapse">
         <ul class="nav">
           <li><a href="/">Home</a></li>
@@ -53,27 +61,25 @@
 <div id="wrapper">
   <div id="main" class="container-fluid">
     <div class="row-fluid">
+<div class="pull-right">
+  <span class="label">2013-05-13</span>
+  
+  <span class="label label-important">推計統計学</span>
+  
+  <span class="label label-important">ABテスト</span>
+  
+</div>
 <h2>
   <a href="/2013/05/13/ab-test-1.html" >そのABテスト正しいですか?</a>
-  <div class="pull-right">
-    <span class="label">2013-05-13</span>
-  
-    <span class="label label-important">推計統計学</span>
-  
-    <span class="label label-important">ABテスト</span>
-  
-  </div>
 </h2>
-<div class="row-fluid">
-  <div class="span12 text-right">
-    <div class="fb-like" data-href="http://kengos.jp/2013/05/13/ab-test-1.html" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
-    <span><a href="http://b.hatena.ne.jp/entry/http://kengos.jp/2013/05/13/ab-test-1.html" class="hatena-bookmark-button" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></span>
-    <span><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
-    <!-- google --><div class="g-plusone" data-size="medium" style="width:60px;"></div><!-- // google -->
-  </div>
+<div class="social-links">
+  <div class="fb-like" data-href="http://kengos.jp/2013/05/13/ab-test-1.html" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+  <span><a href="http://b.hatena.ne.jp/entry/http://kengos.jp/2013/05/13/ab-test-1.html" class="hatena-bookmark-button" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></span>
+  <span><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  <!-- google --><div class="g-plusone" data-size="medium" style="width:60px;"></div><!-- // google -->
 </div>
-<h3 id='id19'>ストーリー</h3>
+<h3 id='id29'>ストーリー</h3>
 <div class='well'>
   A社において、広告出稿時のランディングページの効果測定のために、実施することにしました。<br />
   Aliceさんは、Aパターン、Bパターンの2種類のデザインを用意し、<br />
@@ -85,7 +91,7 @@
   <table class='table table-striped'>
     <thead>
       <tr>
-        <th />
+        <th>-</th>
         <th>達成</th>
         <th>未達成</th>
         <th>計</th>
@@ -121,7 +127,7 @@
   <table class='table table-striped'>
     <thead>
       <tr>
-        <th />
+        <th>-</th>
         <th>達成</th>
         <th>未達成</th>
       </tr>
@@ -135,7 +141,7 @@
       <tr>
         <td>Bパターン</td>
         <td>13.43%</td>
-        <td>89.09%</td>
+        <td>86.57%</td>
       </tr>
     </tbody>
   </table>
@@ -145,31 +151,50 @@
 <div class='well'>
   今回の結果について、Aliceさんは単純に割合で結果を報告しました。<br />
   しかし、『偶然』という点を考慮するとどうでしょう?<br />
-  上記の表のみでは、『偶然』このような結果になったと否定することはできません。
+  上記の表のみでは、『偶然』このような結果になったと否定することはできません。<br />
   『偶然』を否定するためには、<strong>推計統計学のカイ二乗検定</strong>を利用します。
-</div><div class='row-fluid'>
+</div><div class='well'>
   <dl>
     <dt>カイ二乗検定</dt>
-    <dd>よくサイコロを例にされる。<br />
-      サイコロは理論上どの目も1/6の確率で出現するが、実験時に『偶然』1の目が多くなった。<br />
-      この『偶然』を否定したり、サイコロに歪みがあるから、1の目が多くなった。<br />
-      などの推論をする際に使われる。<br />
-      次を一読すると良い。<a href='http://d.hatena.ne.jp/Zellij/20111202/p1' target='_blank'>[統計]カイ二乗検定</a>
+    <dd>計測時の誤差や偶然に左右されず、計測結果が理論値と同じであるかを検証するための手法です。<br />
+      よくサイコロや血液型を例にして、カイ二乗検定の計算方法が例に出されます。<br />
+      次のリンク(<a href='http://d.hatena.ne.jp/Zellij/20111202/p1' target='_blank'>[統計]カイ二乗検定</a>)が非常に参考になるので、一度目を通してみると良いでしょう。
+    </dd>
+    <dt>参考例題</dt>
+    <dd>
+      サイコロを100回振った。それぞれの目は次の回数出現しました。<br />
+      出現回数 1: 17, 2: 15, 3: 16, 4: 17, 5: 18, 6: 17<br />
+      『サイコロに重心のズレなどの歪みがない』と仮定すると、それぞれの目は1/6の確率で出現すると推計されます。<br />
+      このサイコロには重心のズレ等の歪みがないといえるでしょうか?
+    </dd>
+    <dd>
+      なお、この結果は『サイコロに重心のズレなどの歪みがない』という仮定は正しいという結果が計算で導けます。<br />
+      また出現回数が仮に 1: 17, 2: 15, 3: 16, 4: 7, 5: 18, 6: 27となった場合は、<br />
+      この仮定は正しくないという結果(= サイコロに重心のズレ等の歪みがある)が計算によって導けます。
     </dd>
   </dl>
-</div><p class='well'>
-  サイコロの場合は、期待度がそれぞれ1/6 とすぐわかります。<br />
-  しかし、この例の場合は、期待度をどのように設定すれば良いのでしょうか?<br />
-</p>
-<h3 id='id20'>カイ二乗値の算出</h3>
+</div>
+<h3 id='id30'>カイ二乗値の算出</h3>
 <p>以下は計算過程を示したものですので、興味が無い方は読み飛ばし推奨</p>
-<h4 id='id21'>期待度の算出</h4>
+<h4 id='id31'>カイ二乗値とは</h4>
 <div class='well'>
-  カイ二条検定において、『サイコロはどの目も1/6の確率で出現する』という期待度が必要です。<br />
-  この例の場合は、以下のように期待度を算出します。
-  AパターンでもBパターンでもどちらを見せても、『達成』、『未達成』は変わらないと推定する。<br />
-  (つまり、今回はこのような結果になったが、実はAパターンでの達成率は10%, Bパターンも10%であると推定するような感じ。)<br />
-  上記推定から、この例における期待度を算出すると以下のようになる。<br />
+  カイ二乗値は次のように定義されます。<br />
+  χ^2 = (観測値1 - 期待度1) ^ 2 / 期待度1 + (観測値2 - 期待度2) ^ 2 / 期待度2 + ... (観測値n - 期待度n) ^ 2 / 期待度n<br />
+  上のサイコロの例の場合では<br />
+  χ^2 = (17 - 16.67) ^ 2 / 16.67 + (15 - 16.67) ^ 2 / 16.67 ... を計算すれば良いことになります。<br /><br />
+
+  カイ二条検定において、観測値のほかに、期待度という値が必要になります。<br />
+  サイコロの例の場合は　『どの目も1/6の確率で出現する』という推定ができるので、この期待度の算出は簡単です。<br />
+  今回のA/Bテストのような場合はどのように期待度を算出すればよいのでしょうか?<br />
+</div>
+<h4 id='id32'>期待度の算出</h4>
+<div class='well'>
+  この例の場合は、以下のように期待度を算出します。<br />
+  まず、Aliceさんが立証したいのは、『AパターンとBパターンでは、Bパターンのほうが達成率が高くなる』という仮説です。<br />
+  この仮説では、期待度は算出できません。<br />
+  (Bパターンのほうが達成率が高くなる。その期待度はいくつであるというのがいえないため。)
+  そこで、<strong>『AパターンでもBパターンでもどちらを見せても、『達成』、『未達成』は変わらない』</strong>という仮定をしてみることにします。<br />
+  カイ二乗検定で仮設を否定し、前述の『AパターンとBパターンでは、Bパターンのほうが達成率が高くなる』という仮定を立証するというアプローチをとります。<br />
 </div><div class='row-fluid'>
 <div class='span6'>
   <table class='table table-striped'>
@@ -193,23 +218,22 @@
       </tr>
     </tbody>
   </table>
-  <p class='well'>
+</div>
+</div><div class='well'>
   Aパターンの達成の期待度は、達成の合計 * Aパターンの合計 / 合計 で算出されている。(150 * 550 / 1220)<br />
   Bパターンの達成の期待度は、達成の合計 * Bパターンの合計 / 合計 で算出されている。(150 * 670 / 1220)<br />
   Aパターンの未達成の期待度は、未達成の合計 * Aパターンの合計 / 合計 で算出されている。(1070 * 550 / 1220)<br />
   Bパターンの未達成の期待度は、未達成の合計 * Bパターンの合計 / 合計 で算出されている。(1070 * 670 / 1220)<br />
   <a href='http://www.geisya.or.jp/~mwm48961/statistics/kai2.htm' target='_blank'>参考</a>
-  </p>
 </div>
-</div>
-<h4 id='id22'>カイ二乗値の計算</h4>
+<h4 id='id33'>カイ二乗値の計算</h4>
 <div class='well'>
   期待度が算出できたら、カイ二乗値は簡単に算出できます。<br />
   実測値と期待度の表において、各項目につき以下を計算します。<br />
-  <strong>(実測値 - 期待度)^2 / 期待度</strong><br />
+  <strong>(観測値 - 期待度)^2 / 期待度</strong><br />
   各項目の上記計算結果の合計が　カイ二乗値となります。
 </div><div class='row-fluid'>
-<div class='span6'>
+<div class='span8'>
   <table class='table table-striped'>
     <thead>
       <tr>
@@ -235,29 +259,34 @@
   これがカイ二乗値です。
 </div>
 </div>
-<h3 id='id23'>推定の検証</h3>
+<h3 id='id34'>推定の検証</h3>
 <div class='well'>今回の推定は、『AパターンでもBパターンでもどちらを見せても、『達成』、『未達成』は変わらない』という推定でした。<br />
   自由度(df)が 1 (達成,未達成の2パターンのみであるから。仮にA, B, Cの3パターンの結果がある場合は自由度は2となる。)<br />
   有意水準 5%<br />
   のおけるカイ二乗値を<a href='http://www.eco.osakafu-u.ac.jp/~kano/images/file/note_statistics/tab_chi2.pdf'>カイ二乗分布表(pdf)</a>より算出すると、
-  『3.841』という値が得られる。
+  『3.841』という値が得られます。
   カイ二乗値は, 『1.7802』であるため、カイ二乗分布表の値より小さくなり、<br />
-  <strong>今回のA/Bテストの結果は、『AパターンでもBパターンでもどちらを見せても、『達成』、『未達成』は変わらない』ということになる。</strong><br />
-  (仮に3.841より大きい場合は、『Bパターンのほうが、『達成』が多くなる』となる。)
-</div><p class='lear'>[まとめ]<br />今回のようなA/Bテストの場合はカイ二乗値が <strong>3.841</strong>より大きくないと、A, Bどちらが優れているかをいうことができない</p>
-<h3 id='id24'>簡単にカイ二乗値を計算する方法</h3>
+  <strong>今回のA/Bテストの結果は、『AパターンでもBパターンでもどちらを見せても、『達成』、『未達成』は変わらない』という仮設を否定することができないことになります。</strong><br />
+  (仮に3.841より大きい場合は、上記仮設を否定でき、『Bパターンのほうが、『達成』が多くなる』となります。)
+</div>
+<h3 id='id35'>まとめ</h3>
+<ul>
+  <li>A/Bテストの結果を比率に直した表を信頼してはいけない。</li>
+  <li>各種統計学的な手法を用いて、必ず有意差があることを立証すること。</li>
+</ul>
+<h3 id='_'>おまけ: 簡単にカイ二乗値等を簡単に計算する</h3>
 <ul>
   <li>Excelを使う<br />いっぱい落ちているのでそれを使う(ここでは解説しない)</li>
   <li>R言語を使う(後述)</li>
 </ul>
 <h4 id='r'>R言語を使う方法</h4>
-<p>インストールの仕方については、解説しない。<br />
+<p>インストールの仕方については、解説しません。<br />
   <a href='http://cse.niaes.affrc.go.jp/miwa/ja/R/setupR/index.html' target='_blank'>http://cse.niaes.affrc.go.jp/miwa/ja/R/setupR/index.html</a>
   などを参考にするとよいかもしれない。
 </p><div class='well'>
-  インストールができたものとして、Rコンソール上で以下のように入力すると、カイ二乗値、p値それぞれが簡単に計算できる。<br />
-  <strong>matrix(c(490, 60, 580, 90))</strong>のところの数値を変化させることで、2 x 2の集計結果についてはカイ二乗値が計算できる。<br />
-  なお、 2 x 3については<strong>matrix(c(a1, a2, a3, b1, b2, b3))</strong>とすればよい。
+  インストールができたものとして、Rコンソール上で以下のように入力すると、カイ二乗値、p値それぞれが簡単に計算できます。<br />
+  <strong>matrix(c(490, 60, 580, 90))</strong>のところの数値を変化させることで、2 x 2の集計結果についてはカイ二乗値が計算できます。<br />
+  なお、 2 x 3については<strong>matrix(c(a1, a2, a3, b1, b2, b3))</strong>としてください。
 </div><pre><code>&gt; chisq.test(matrix(c(490, 60, 580, 90), ncol=2, byrow=T))
 
   Pearson's Chi-squared test with Yates' continuity correction
@@ -265,12 +294,12 @@
 data:  matrix(c(490, 60, 580, 90), ncol = 2, byrow = T)
 X-squared = 1.5577, df = 1, p-value = 0.212</code></pre><p>
   なお、この結果について p-value = 0.212 となっている点から、<br />
-  このA/Bテストの結果は 『A, Bは達成、未達成に差がない状況で、21.2%の確率でこのような誤差、偶然が生じる』ということができる。<br />
-  通常統計学的に認められる範囲は、5% または 1%ということを覚えておくと良いだろう。<br />
-  (Rでのchisq.testの結果の値が0.05未満)
+  このA/Bテストの結果は 『A, Bは達成、未達成に差がない状況で、21.2%の確率でこのような誤差、偶然が生じる』ということがいえます。<br />
+  通常統計学的に認められる範囲は、Rでのchisq.testの結果の値が0.05未満であれば、この仮説を否定出来ます。
 </p><p>
-  また、もし今回の結果がそれぞれについて2倍のサンプル数が取得できた場合は以下のような結果となる。<br />
-  p値が約7%であるので、微妙なラインだが、この程度でれば、Bパターンを採用しても良いと考えられる。
+  また、もし今回の結果がそれぞれについて2倍のサンプル数が取得できた場合は以下のような結果となります。<br />
+  p値が約7%であるので、微妙なラインだが、この程度でれば、Bパターンを採用しても良いと考えられます。<br />
+  (ようするに今回カイ二乗検定を実施したが、サンプル数が少なかったのでカイ二乗検定では有意性を認めることができなかったといえます。)
 </p><pre><code>&gt; chisq.test(matrix(c(980, 120, 1160, 180), ncol=2, byrow=T))
 
   Pearson's Chi-squared test with Yates' continuity correction

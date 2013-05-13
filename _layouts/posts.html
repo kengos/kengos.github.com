@@ -1,22 +1,20 @@
 ---
 layout: default
 ---
+<div class="pull-right">
+  <span class="label">{{ page.date | date: "%Y-%m-%d" }}</span>
+  {% for tag in page.tags %}
+  <span class="label label-important">{{ tag }}</span>
+  {% endfor %}
+</div>
 <h2>
   <a href="{{ page.url }}" >{{ page.title }}</a>
-  <div class="pull-right">
-    <span class="label">{{ page.date | date: "%Y-%m-%d" }}</span>
-  {% for tag in page.tags %}
-    <span class="label label-important">{{ tag }}</span>
-  {% endfor %}
-  </div>
 </h2>
-<div class="row-fluid">
-  <div class="span12 text-right">
-    <div class="fb-like" data-href="http://kengos.jp{{ page.url }}" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
-    <span><a href="http://b.hatena.ne.jp/entry/http://kengos.jp{{ page.url }}" class="hatena-bookmark-button" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></span>
-    <span><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
-    <!-- google --><div class="g-plusone" data-size="medium" style="width:60px;"></div><!-- // google -->
-  </div>
+<div class="social-links">
+  <div class="fb-like" data-href="http://kengos.jp{{ page.url }}" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+  <span><a href="http://b.hatena.ne.jp/entry/http://kengos.jp{{ page.url }}" class="hatena-bookmark-button" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></span>
+  <span><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  <!-- google --><div class="g-plusone" data-size="medium" style="width:60px;"></div><!-- // google -->
 </div>
 {{ content }}

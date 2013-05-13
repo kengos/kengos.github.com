@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="/css/main.css">
 <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
 <link rel="author" href="https://plus.google.com/102187337938024275663/posts">
+<meta name="google-site-verification" content="0lvnSNpPQpx5PVeFdlOeEGWG4ayedwnXKG3OcQKp_Ys">
 <meta property="og:title" content="Chart.js line sample">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://kengos.jp/2013/04/04/chartjs-line-sample.html">
@@ -21,14 +22,16 @@
 
 <script src="/js/Chart.min.js"></script>
 
+<!-- ga -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-40855862-1', 'kengos.jp');
+  ga('create', 'UA-40855269-1', 'kengos.jp');
   ga('send', 'pageview');
+
 </script>
 </head>
 <body>
@@ -43,6 +46,11 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container-fluid">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
       <div class="nav-collapse collapse">
         <ul class="nav">
           <li><a href="/">Home</a></li>
@@ -55,23 +63,21 @@
 <div id="wrapper">
   <div id="main" class="container-fluid">
     <div class="row-fluid">
+<div class="pull-right">
+  <span class="label">2013-04-04</span>
+  
+  <span class="label label-important">javascript</span>
+  
+</div>
 <h2>
   <a href="/2013/04/04/chartjs-line-sample.html" >Chart.js line sample</a>
-  <div class="pull-right">
-    <span class="label">2013-04-04</span>
-  
-    <span class="label label-important">javascript</span>
-  
-  </div>
 </h2>
-<div class="row-fluid">
-  <div class="span12 text-right">
-    <div class="fb-like" data-href="http://kengos.jp/2013/04/04/chartjs-line-sample.html" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
-    <span><a href="http://b.hatena.ne.jp/entry/http://kengos.jp/2013/04/04/chartjs-line-sample.html" class="hatena-bookmark-button" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></span>
-    <span><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
-    <!-- google --><div class="g-plusone" data-size="medium" style="width:60px;"></div><!-- // google -->
-  </div>
+<div class="social-links">
+  <div class="fb-like" data-href="http://kengos.jp/2013/04/04/chartjs-line-sample.html" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+  <span><a href="http://b.hatena.ne.jp/entry/http://kengos.jp/2013/04/04/chartjs-line-sample.html" class="hatena-bookmark-button" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></span>
+  <span><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  <!-- google --><div class="g-plusone" data-size="medium" style="width:60px;"></div><!-- // google -->
 </div>
 <h3>
   <a href='https://github.com/nnnick/Chart.js' target='_blank'>Chart.js</a> Option sample
