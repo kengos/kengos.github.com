@@ -29,6 +29,9 @@ nav {
   font-size: 16px;
 }
 
+.posts {
+  min-height: 400px;
+}
 footer.page-footer {
   background-color: #9900bb;
 }
