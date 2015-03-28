@@ -1,13 +1,16 @@
 ---
 layout: default
 ---
-<div class="pull-right">
-  <span class="label">{{ page.date | date: "%Y-%m-%d" }}</span>
-  {% for tag in page.tags %}
-  <span class="label label-important">{{ tag }}</span>
-  {% endfor %}
+<div class="right-align">
+  <p>{{ page.date | date: "%Y-%m-%d" }}</p>
 </div>
 <h2>
   <a href="{{ page.url }}" >{{ page.title }}</a>
 </h2>
+<div class="right-align tags">
+  Tag:
+  {% for tag in page.tags %}
+  <span class="badge">{{ tag }}</span>
+  {% endfor %}
+</div>
 {{ content }}

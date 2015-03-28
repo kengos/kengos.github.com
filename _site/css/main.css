@@ -1,22 +1,40 @@
+nav {
+  background-color: #bc0cdc;
+}
+
+#navigation .brand-logo {
+  margin-left: 1em;
+}
+
+#navigation ul a {
+  font-size: 18px;
+  padding: 0 30px;
+}
+
 #main p {
   font-size: 16px;
 }
 
+#main h2 {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 800;
+}
 #main h3 {
   text-decoration: underline;
   font-size: 18px;
 }
 
-#footer {
-  width: 100%;
-  line-height: 2em;
-  height: 2em;
+#main h4 {
+  font-size: 16px;
 }
 
-#footer p {
-  text-align: center;
-  margin: 0;
-  padding: 0;
+footer.page-footer {
+  background-color: #9900bb;
+}
+footer.page-footer .footer-copyright {
+  background-color: #fff;
+  color: #333;
 }
 
 .social-links {

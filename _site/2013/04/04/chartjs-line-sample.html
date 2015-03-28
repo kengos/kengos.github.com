@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chart.js line sample</title>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css">
 <link rel="stylesheet" href="/css/main.css">
 <link rel="author" href="https://plus.google.com/102187337938024275663/posts">
 <meta name="google-site-verification" content="0lvnSNpPQpx5PVeFdlOeEGWG4ayedwnXKG3OcQKp_Ys">
@@ -30,27 +28,29 @@
 </script>
 </head>
 <body>
+<nav id="navigation">
+  <div class="nav-wrapper">
+    <a href="http://kengos.jp/" class="brand-logo">kengos.jp</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="/posts.html">Posts</a></li>
+    </ul>
+  </div>
+</nav>
 <div class="container">
-  <header class="header clearfix">
-    <nav>
-      <ul class="nav nav-pills pull-right">
-        <li role="presentation"><a href="/">Home</a></li>
-        <li role="presentation"><a href="/posts.html">Posts</a></li>
-      </ul>
-    </nav>
-    <h3 class="text-muted">kengos.jp</h3>
-  </header>
   <div id="main" class="row">
-    <div class="col-md-12">
-      <div class="pull-right">
-  <span class="label">2013-04-04</span>
-  
-  <span class="label label-important">javascript</span>
-  
+    <div class="col s12">
+      <div class="right-align">
+  <p>2013-04-04</p>
 </div>
 <h2>
   <a href="/2013/04/04/chartjs-line-sample.html" >Chart.js line sample</a>
 </h2>
+<div class="right-align tags">
+  Tag:
+  
+  <span class="badge">javascript</span>
+  
+</div>
 <h3>
   <a href="https://github.com/nnnick/Chart.js" target="_blank">Chart.js</a> Option sample
 </h3>
@@ -123,18 +123,22 @@ $(function(){
 
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-12">
-      <div id="social-button"></div>
+</div>
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div id="social-button"></div>
+      </div>
     </div>
   </div>
-  <footer id="footer">
-    <p>Copyright (c) kengos 2013 All rights reserved.</p>
-  </footer>
-</div>
+  <div class="footer-copyright">
+    <div class="container">&copy; kengos 2013</div>
+  </div>
+</footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/js/jquery.popn-socialbutton.js"></script>
+<script src="/js/jquery.popn-socialbutton.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
 <script>
 (function($){
   $('#social-button').popnSocialButton([ 'twitter', 'facebook', 'hatebu', 'gplus', 'pocket' ]);
