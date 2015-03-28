@@ -1,6 +1,6 @@
 ---
 layout: default
-title: posts
+title: ブログ一覧
 ---
 <div id="post-list">
 <div id="post-items" class="collection collection-post">

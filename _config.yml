@@ -4,3 +4,5 @@ source: .
 desitination: .
 author:
   name: kengos
+gems:
+  - jekyll-sitemap
