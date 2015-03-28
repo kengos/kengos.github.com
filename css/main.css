@@ -29,9 +29,21 @@ nav {
   font-size: 16px;
 }
 
-.posts {
-  min-height: 400px;
+#post-list {
+  margin-top: 2em;
+  min-height: 500px;
 }
+
+#post-items a {
+  line-height: 2em;
+  font-size: 18px;
+}
+
+#post-items a:hover {
+  background-color: #9900bb;
+  color: #fff;
+}
+
 footer.page-footer {
   background-color: #9900bb;
 }

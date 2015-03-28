@@ -2,11 +2,10 @@
 layout: default
 title: posts
 ---
-
-<ul class="unstyled">
+<div id="post-list">
+<div id="post-items" class="collection collection-post">
 {% for post in site.posts %}
-  <li>
-    <a href="{{ post.url }}">{{ post.date | date_to_long_string }} : {{ post.title }}</a>
-  </li>
+  <a href="{{ post.url }}" class="collection-item">{{ post.date | date_to_long_string }} : {{ post.title }}</a>
 {% endfor %}
-</ul>
+</div>
+</div>
