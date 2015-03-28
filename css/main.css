@@ -1,9 +1,9 @@
-nav {
-  background-color: #bc0cdc;
+* {
+  font-size: 16px;
 }
 
-#main p {
-  font-size: 16px;
+nav {
+  background-color: #bc0cdc;
 }
 
 #main h2 {
@@ -48,6 +48,27 @@ footer.page-footer .footer-copyright {
   padding: 0;
   margin: 0;
 }
+
+.huge-text {
+  font-size: 30px;
+  color: #ef0000;
+}
+
+.large-text {
+  font-size: 26px;
+  color: #333;
+}
+
+pre {
+  margin: 1em 0;
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  clear: both;
+  width: 90%;
+  overflow: auto;
+  background-color: #eee;
+}
+
 @media only screen and (min-width: 481px) {
   #navigation .brand-logo {
     margin-left: 1em;
