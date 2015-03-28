@@ -2,15 +2,6 @@ nav {
   background-color: #bc0cdc;
 }
 
-#navigation .brand-logo {
-  margin-left: 1em;
-}
-
-#navigation ul a {
-  font-size: 18px;
-  padding: 0 30px;
-}
-
 #main p {
   font-size: 16px;
 }
@@ -56,4 +47,24 @@ footer.page-footer .footer-copyright {
   display: table;
   padding: 0;
   margin: 0;
+}
+@media only screen and (min-width: 481px) {
+  #navigation .brand-logo {
+    margin-left: 1em;
+  }
+
+  #navigation ul a {
+    font-size: 18px;
+    padding: 0 30px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #navigation .brand-logo {
+    margin-left: 0px;
+  }
+
+  #navigation ul a {
+    font-size: 13px;
+    padding: 0 5px;
+  }
 }

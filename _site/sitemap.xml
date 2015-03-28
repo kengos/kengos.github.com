@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>/2015/03/28/hamamatsu-ruby-kaigi-01.html</loc>
+    <lastmod>2015-03-28T00:00:00+09:00</lastmod>
+  </url>
+  <url>
+    <loc>/2013/05/13/ab-test-1.html</loc>
+    <lastmod>2013-05-13T00:00:00+09:00</lastmod>
+  </url>
+  <url>
+    <loc>/2013/04/04/chartjs-line-sample.html</loc>
+    <lastmod>2013-04-04T00:00:00+09:00</lastmod>
+  </url>
+  <url>
+    <loc>/</loc>
+  </url>
+  <url>
+    <loc>/posts.html</loc>
+  </url>
+</urlset>
