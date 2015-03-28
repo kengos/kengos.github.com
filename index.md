@@ -2,7 +2,6 @@
 layout: default
 title: kengos.jp
 ---
-# kengos.jp
 ![kengos icon](/images/kengos.jpg)
 
 Ruby Programmer

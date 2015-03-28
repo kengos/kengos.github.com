@@ -4,14 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chart.js line sample</title>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/font-awesome.min.css">
-<!--[if IE 7]>
-<link rel="stylesheet" href="/css/font-awesome-ie7.min.css">
-<![endif]-->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/main.css">
-<link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
 <link rel="author" href="https://plus.google.com/102187337938024275663/posts">
 <meta name="google-site-verification" content="0lvnSNpPQpx5PVeFdlOeEGWG4ayedwnXKG3OcQKp_Ys">
 <meta property="og:title" content="Chart.js line sample">
@@ -31,39 +27,22 @@
 
   ga('create', 'UA-40855269-1', 'kengos.jp');
   ga('send', 'pageview');
-
 </script>
 </head>
 <body>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container-fluid">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-      <div class="nav-collapse collapse">
-        <ul class="nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/posts.html">Posts</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </div>
-</div>
-<div id="wrapper">
-  <div id="main" class="container-fluid">
-    <div class="row-fluid">
-<div class="pull-right">
+<div class="container">
+  <header class="header clearfix">
+    <nav>
+      <ul class="nav nav-pills pull-right">
+        <li role="presentation"><a href="/">Home</a></li>
+        <li role="presentation"><a href="/posts.html">Posts</a></li>
+      </ul>
+    </nav>
+    <h3 class="text-muted">kengos.jp</h3>
+  </header>
+  <div id="main" class="row">
+    <div class="col-md-12">
+      <div class="pull-right">
   <span class="label">2013-04-04</span>
   
   <span class="label label-important">javascript</span>
@@ -72,39 +51,35 @@
 <h2>
   <a href="/2013/04/04/chartjs-line-sample.html" >Chart.js line sample</a>
 </h2>
-<div class="social-links">
-  <div class="fb-like" data-href="http://kengos.jp/2013/04/04/chartjs-line-sample.html" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
-  <span><a href="http://b.hatena.ne.jp/entry/http://kengos.jp/2013/04/04/chartjs-line-sample.html" class="hatena-bookmark-button" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></span>
-  <span><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
-  <!-- google --><div class="g-plusone" data-size="medium" style="width:60px;"></div><!-- // google -->
-</div>
 <h3>
-  <a href='https://github.com/nnnick/Chart.js' target='_blank'>Chart.js</a> Option sample
-</h3><div class='row-fluid'>
-  <div class='span9'>
-    <canvas height='300' id='line1' />
+  <a href="https://github.com/nnnick/Chart.js" target="_blank">Chart.js</a> Option sample
+</h3>
+<div class="row-fluid">
+  <div class="span9">
+    <canvas id="line1" height="300"></canvas>
   </div>
-  <div class='span3'>
-<pre><code data-for='line1'>var options = {
+  <div class="span3">
+<pre><code data-for="line1">var options = {
 
 }</code></pre>
   </div>
-</div><div class='row-fluid'>
-  <div class='span9'>
-    <canvas height='300' id='line2' />
+</div>
+<div class="row-fluid">
+  <div class="span9">
+    <canvas id="line2" height="300"></canvas>
   </div>
-  <div class='span3'>
-<pre><code data-for='line2'>var options = {
+  <div class="span3">
+<pre><code data-for="line2">var options = {
   scaleOverlay: true
 }</code></pre>
   </div>
-</div><div class='row-fluid'>
-  <div class='span9'>
-    <canvas height='300' id='line3' />
+</div>
+<div class="row-fluid">
+  <div class="span9">
+    <canvas id="line3" height="300"></canvas>
   </div>
-  <div class='span3'>
-<pre><code data-for='line3'>var options = {
+  <div class="span3">
+<pre><code data-for="line3">var options = {
   scaleOverlay: true,
   scaleOverride: true,
   scaleSteps: 15,
@@ -112,7 +87,9 @@
   scaleStartValue: -50
 }</code></pre>
   </div>
-</div><p class='note'>Note: Tooltip support: <a href='https://github.com/nnnick/Chart.js/pull/51' target='_blank'>https://github.com/nnnick/Chart.js/pull/51</a></p><script>
+</div>
+<p class="note">Note: Tooltip support: <a href="https://github.com/nnnick/Chart.js/pull/51" target="_blank">https://github.com/nnnick/Chart.js/pull/51</a></p>
+<script>
 $(function(){
   var data = {
     labels : ["1月","2月","3月","4月","5月","6月","7月"],
@@ -142,25 +119,26 @@ $(function(){
   });
 });
 </script>
+
+
     </div>
   </div>
-  <div id="push"></div>
-</div>
-<footer id="footer">
-  <div class="container-fluid">
-    <p>Copyright (c) kengos 2013 All rights reserved.</p>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="social-button"></div>
+    </div>
   </div>
-</footer>
-<script src="/js/bootstrap.min.js"></script>
-<!-- google -->
-<script type="text/javascript">
-  window.___gcfg = {lang: 'ja'};
-
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
+  <footer id="footer">
+    <p>Copyright (c) kengos 2013 All rights reserved.</p>
+  </footer>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/jquery.popn-socialbutton.js"></script>
+<script>
+(function($){
+  $('#social-button').popnSocialButton([ 'twitter', 'facebook', 'hatebu', 'gplus', 'pocket' ]);
+})(jQuery);
 </script>
 </body>
 </html>

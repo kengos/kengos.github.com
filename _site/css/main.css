@@ -1,42 +1,26 @@
-html { height: 100%; margin: 0; padding: 0; }
-body { height: 100%; margin: 0; padding: 0; }
-#wrapper {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -30px;
+#main p {
+  font-size: 16px;
 }
-#push {
-  height: 30px;
+
+#main h3 {
+  text-decoration: underline;
+  font-size: 18px;
 }
-#main {
-  padding-top: 60px;
-}
+
 #footer {
-  height: 29px;
-  border-top: 1px solid #aaa;
-  background-color: #f5f5f5;
+  width: 100%;
+  line-height: 2em;
+  height: 2em;
 }
+
 #footer p {
   text-align: center;
-  font-size: 12px;
-  margin:0;
-  line-height: 29px;
+  margin: 0;
+  padding: 0;
 }
 
-@media (max-width: 767px) {
-  #main { padding-top: 0; }
-  .pull-right { float: none; }
-  h2 { font-size: 20px; line-height: 2.3em; clear: both; }
-  h3 { font-size: 20px; text-decoration: underline; }
-  #footer {
-    margin-left: -20px;
-    margin-right: -20px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-iframe.twitter-share-button {
-  width: 95px!important;
+.social-links {
+  display: table;
+  padding: 0;
+  margin: 0;
 }

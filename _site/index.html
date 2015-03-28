@@ -4,14 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>kengos.jp</title>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/font-awesome.min.css">
-<!--[if IE 7]>
-<link rel="stylesheet" href="/css/font-awesome-ie7.min.css">
-<![endif]-->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/main.css">
-<link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
 <link rel="author" href="https://plus.google.com/102187337938024275663/posts">
 <meta name="google-site-verification" content="0lvnSNpPQpx5PVeFdlOeEGWG4ayedwnXKG3OcQKp_Ys">
 <meta property="og:title" content="kengos.jp">
@@ -29,78 +25,57 @@
 
   ga('create', 'UA-40855269-1', 'kengos.jp');
   ga('send', 'pageview');
-
 </script>
 </head>
 <body>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container-fluid">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-      <div class="nav-collapse collapse">
-        <ul class="nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/posts.html">Posts</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </div>
-</div>
-<div id="wrapper">
-  <div id="main" class="container-fluid">
-    <div class="row-fluid">
-<h1 id='kengosjp'>kengos.jp</h1>
-
-<p><img alt='kengos icon' src='/images/kengos.jpg' /></p>
+<div class="container">
+  <header class="header clearfix">
+    <nav>
+      <ul class="nav nav-pills pull-right">
+        <li role="presentation"><a href="/">Home</a></li>
+        <li role="presentation"><a href="/posts.html">Posts</a></li>
+      </ul>
+    </nav>
+    <h3 class="text-muted">kengos.jp</h3>
+  </header>
+  <div id="main" class="row">
+    <div class="col-md-12">
+      <p><img src="/images/kengos.jpg" alt="kengos icon" /></p>
 
 <p>Ruby Programmer</p>
 
-<h2 id='ruby__rails'>Ruby &amp; Rails</h2>
+<h2 id="ruby--rails">Ruby &amp; Rails</h2>
 
 <ul>
-<li><a href='https://github.com/kengos/active_export'>active_export</a> &#8230; Csv exporting tool based on YAML</li>
-
-<li><a href='https://github.com/kengos/rakuten_api'>rakuten_api</a> &#8230; Rakuten Api client</li>
+  <li><a href="https://github.com/kengos/active_export">active_export</a> … Csv exporting tool based on YAML</li>
+  <li><a href="https://github.com/kengos/rakuten_api">rakuten_api</a> … Rakuten Api client</li>
 </ul>
 
-<h2 id='php_yii_framework'>PHP (Yii framework)</h2>
+<h2 id="php-yii-framework">PHP (Yii framework)</h2>
 
 <ul>
-<li><a href='https://github.com/kengos/yii-testcache'>yii-testcache</a> &#8230; test of cache for yii framework</li>
-
-<li><a href='https://github.com/kengos/FactoryGirl'>FactoryGirl</a> &#8230; Fixture replacement tool like FactoryGirl</li>
+  <li><a href="https://github.com/kengos/yii-testcache">yii-testcache</a> … test of cache for yii framework</li>
+  <li><a href="https://github.com/kengos/FactoryGirl">FactoryGirl</a> … Fixture replacement tool like FactoryGirl</li>
 </ul>
+
     </div>
   </div>
-  <div id="push"></div>
-</div>
-<footer id="footer">
-  <div class="container-fluid">
-    <p>Copyright (c) kengos 2013 All rights reserved.</p>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="social-button"></div>
+    </div>
   </div>
-</footer>
-<script src="/js/bootstrap.min.js"></script>
-<!-- google -->
-<script type="text/javascript">
-  window.___gcfg = {lang: 'ja'};
-
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
+  <footer id="footer">
+    <p>Copyright (c) kengos 2013 All rights reserved.</p>
+  </footer>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/jquery.popn-socialbutton.js"></script>
+<script>
+(function($){
+  $('#social-button').popnSocialButton([ 'twitter', 'facebook', 'hatebu', 'gplus', 'pocket' ]);
+})(jQuery);
 </script>
 </body>
 </html>

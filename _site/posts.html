@@ -4,14 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>posts</title>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/font-awesome.min.css">
-<!--[if IE 7]>
-<link rel="stylesheet" href="/css/font-awesome-ie7.min.css">
-<![endif]-->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/main.css">
-<link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
 <link rel="author" href="https://plus.google.com/102187337938024275663/posts">
 <meta name="google-site-verification" content="0lvnSNpPQpx5PVeFdlOeEGWG4ayedwnXKG3OcQKp_Ys">
 <meta property="og:title" content="posts">
@@ -29,68 +25,55 @@
 
   ga('create', 'UA-40855269-1', 'kengos.jp');
   ga('send', 'pageview');
-
 </script>
 </head>
 <body>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container-fluid">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-      <div class="nav-collapse collapse">
-        <ul class="nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/posts.html">Posts</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </div>
-</div>
-<div id="wrapper">
-  <div id="main" class="container-fluid">
-    <div class="row-fluid">
-<ul class='unstyled'>
+<div class="container">
+  <header class="header clearfix">
+    <nav>
+      <ul class="nav nav-pills pull-right">
+        <li role="presentation"><a href="/">Home</a></li>
+        <li role="presentation"><a href="/posts.html">Posts</a></li>
+      </ul>
+    </nav>
+    <h3 class="text-muted">kengos.jp</h3>
+  </header>
+  <div id="main" class="row">
+    <div class="col-md-12">
+      <ul class="unstyled">
 
   <li>
-    <a href='/2013/05/13/ab-test-1.html'>13 May 2013 : そのABテスト正しいですか?</a>
+    <a href="/2015/03/28/hamamatsu-ruby-kaigi-01.html">28 March 2015 : 浜松Ruby会議01 感想文</a>
   </li>
 
   <li>
-    <a href='/2013/04/04/chartjs-line-sample.html'>04 April 2013 : Chart.js line sample</a>
+    <a href="/2013/05/13/ab-test-1.html">13 May 2013 : そのABテスト正しいですか?</a>
+  </li>
+
+  <li>
+    <a href="/2013/04/04/chartjs-line-sample.html">04 April 2013 : Chart.js line sample</a>
   </li>
 
 </ul>
+
     </div>
   </div>
-  <div id="push"></div>
-</div>
-<footer id="footer">
-  <div class="container-fluid">
-    <p>Copyright (c) kengos 2013 All rights reserved.</p>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="social-button"></div>
+    </div>
   </div>
-</footer>
-<script src="/js/bootstrap.min.js"></script>
-<!-- google -->
-<script type="text/javascript">
-  window.___gcfg = {lang: 'ja'};
-
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
+  <footer id="footer">
+    <p>Copyright (c) kengos 2013 All rights reserved.</p>
+  </footer>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/jquery.popn-socialbutton.js"></script>
+<script>
+(function($){
+  $('#social-button').popnSocialButton([ 'twitter', 'facebook', 'hatebu', 'gplus', 'pocket' ]);
+})(jQuery);
 </script>
 </body>
 </html>
