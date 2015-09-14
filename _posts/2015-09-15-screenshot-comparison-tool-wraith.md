@@ -41,50 +41,50 @@ ruby 2.2.3p173 (2015-08-18 revision 51636) [x86_64-darwin14]
 
 ### phantomjs, imagemagick のインストール
 
-{% highlight sh %}
+```sh
 $ brew install phantomjs imagemagick
-{% endhighlight %}
+```
 
 (すでに入っていたので,入っていない場合の挙動は不明)
 
 ### Wraith のインストール
 
-{% highlight sh %}
+```sh
 $ gem install wraith
-{% endhighlight %}
+```
 
 rbenv の場合は `rehash` すること
 
-{% highlight sh %}
+```sh
 $ rbenv rehash
-{% endhighlight %}
+```
 
 ## Wraith の設定
 
 任意のディレクトリを作成して、そこに移動して作業します。
 
-{% highlight sh %}
+```sh
 $ mkdir -p ~/wraith
 $ cd ~/wraith
-{% endhighlight %}
+```
 
-{% highlight sh %}
+```sh
 $ wraith setup
-{% endhighlight %}
+```
 
 configs/config.yaml というファイルができています。
 
 そのファイルに設定をいれていきます。
 
-{% highlight sh %}
+```sh
 $ vi configs/config.yaml
-{% endhighlight %}
+```
 
 下のような感じで設定しました。
 
 ポイントとなるのは <strong>domains</strong>, <strong>screen_widths</strong>, <strong>paths</strong> でしょうか。
 
-{% highlight yaml %}
+```yaml
 browser:
   phantomjs: "phantomjs"
 
@@ -116,13 +116,13 @@ spider_days:
 mode: diffs_first
 
 threshold: 5
-{% endhighlight %}
+```
 
 ## Wraith の実行
 
-{% highlight sh %}
+```sh
 $ wraith capture configs/config.yaml
-{% endhighlight %}
+```
 
 しばらく待つと 以下のように <strong>shots</strong> というディレクトリができ、内部に画像ができています。
 
@@ -140,7 +140,7 @@ Openソースなので ソースコードを見ればわかる！っていうの
 
 [Compareの該当ソースの場所](https://github.com/BBC-News/wraith/blob/master/lib/wraith/compare_images.rb#L30)
 
-{% highlight ruby %}
+```ruby
 def compare_task(base, compare, output, info)
   cmdline = "compare -dissimilarity-threshold 1 -fuzz #{wraith.fuzz} -metric AE -highlight-color #{wraith.highlight_color} #{base} #{compare.shellescape} #{output}"
   px_value = Open3.popen3(cmdline) { |_stdin, _stdout, stderr, _wait_thr| stderr.read }.to_f
@@ -151,7 +151,7 @@ def compare_task(base, compare, output, info)
     File.open(info, "w") { |file| file.write("invalid") } unless File.exist?(output)
   end
 end
-{% endhighlight %}
+```
 
 ImageMagick の compareコマンドを使っていることがわかりますね。
 

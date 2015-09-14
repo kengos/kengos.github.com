@@ -91,72 +91,88 @@ ruby 2.2.3p173 (2015-08-18 revision 51636) [x86_64-darwin14]
 
 <h3 id="phantomjs-imagemagick-">phantomjs, imagemagick のインストール</h3>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>brew install phantomjs imagemagick</code></pre></div>
+<p><code>sh
+$ brew install phantomjs imagemagick
+</code></p>
 
 <p>(すでに入っていたので,入っていない場合の挙動は不明)</p>
 
 <h3 id="wraith-">Wraith のインストール</h3>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>gem install wraith</code></pre></div>
+<p><code>sh
+$ gem install wraith
+</code></p>
 
 <p>rbenv の場合は <code>rehash</code> すること</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>rbenv rehash</code></pre></div>
+<p><code>sh
+$ rbenv rehash
+</code></p>
 
 <h2 id="wraith--1">Wraith の設定</h2>
 
 <p>任意のディレクトリを作成して、そこに移動して作業します。</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>mkdir -p ~/wraith
-<span class="nv">$ </span><span class="nb">cd</span> ~/wraith</code></pre></div>
+<p><code>sh
+$ mkdir -p ~/wraith
+$ cd ~/wraith
+</code></p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>wraith setup</code></pre></div>
+<p><code>sh
+$ wraith setup
+</code></p>
 
 <p>configs/config.yaml というファイルができています。</p>
 
 <p>そのファイルに設定をいれていきます。</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>vi configs/config.yaml</code></pre></div>
+<p><code>sh
+$ vi configs/config.yaml
+</code></p>
 
 <p>下のような感じで設定しました。</p>
 
 <p>ポイントとなるのは <strong>domains</strong>, <strong>screen_widths</strong>, <strong>paths</strong> でしょうか。</p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">browser</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">phantomjs</span><span class="p-Indicator">:</span> <span class="s">&quot;phantomjs&quot;</span>
+<p>```yaml
+browser:
+  phantomjs: “phantomjs”</p>
 
-<span class="l-Scalar-Plain">snap_file</span><span class="p-Indicator">:</span> <span class="s">&quot;javascript/snap.js&quot;</span>
+<p>snap_file: “javascript/snap.js”</p>
 
-<span class="l-Scalar-Plain">directory</span><span class="p-Indicator">:</span> <span class="s">&#39;shots&#39;</span>
+<p>directory: ‘shots’</p>
 
-<span class="l-Scalar-Plain">domains</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span> <span class="s">&quot;http://kengos.jp&quot;</span> <span class="c1"># 元となるページのドメイン</span>
-  <span class="l-Scalar-Plain">develpoment</span><span class="p-Indicator">:</span> <span class="s">&quot;http://localhost:4000&quot;</span> <span class="c1"># 比較したいページのドメイン</span>
+<p>domains:
+  production: “http://kengos.jp” # 元となるページのドメイン
+  develpoment: “http://localhost:4000” # 比較したいページのドメイン</p>
 
-<span class="c1"># チェックしたい画面幅(この場合は 320px, 600px, 1280px の3種類)</span>
-<span class="l-Scalar-Plain">screen_widths</span><span class="p-Indicator">:</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">320</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">600</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">1280</span>
+<h1 id="px-600px-1280px-3">チェックしたい画面幅(この場合は 320px, 600px, 1280px の3種類)</h1>
+<p>screen_widths:
+  - 320
+  - 600
+  - 1280</p>
 
-<span class="c1"># チェックするパス</span>
-<span class="c1"># この場合は &quot;/&quot; と &quot;/2015/09/13/password.html&quot; の 2つのパス</span>
-<span class="l-Scalar-Plain">paths</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">home</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/</span>
-  <span class="l-Scalar-Plain">2015_09_13</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/2015/09/13/password.html</span>
+<h1 id="section-2">チェックするパス</h1>
+<p># この場合は “/” と “/2015/09/13/password.html” の 2つのパス
+paths:
+  home: /
+  2015_09_13: /2015/09/13/password.html</p>
 
-<span class="l-Scalar-Plain">fuzz</span><span class="p-Indicator">:</span> <span class="s">&#39;20%&#39;</span>
+<p>fuzz: ‘20%’</p>
 
-<span class="l-Scalar-Plain">spider_days</span><span class="p-Indicator">:</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">10</span>
+<p>spider_days:
+  - 10</p>
 
-<span class="l-Scalar-Plain">mode</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">diffs_first</span>
+<p>mode: diffs_first</p>
 
-<span class="l-Scalar-Plain">threshold</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">5</span></code></pre></div>
+<p>threshold: 5
+```</p>
 
 <h2 id="wraith--2">Wraith の実行</h2>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>wraith capture configs/config.yaml</code></pre></div>
+<p><code>sh
+$ wraith capture configs/config.yaml
+</code></p>
 
 <p>しばらく待つと 以下のように <strong>shots</strong> というディレクトリができ、内部に画像ができています。</p>
 
@@ -174,16 +190,18 @@ ruby 2.2.3p173 (2015-08-18 revision 51636) [x86_64-darwin14]
 
 <p><a href="https://github.com/BBC-News/wraith/blob/master/lib/wraith/compare_images.rb#L30">Compareの該当ソースの場所</a></p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">compare_task</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">compare</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">info</span><span class="p">)</span>
-  <span class="n">cmdline</span> <span class="o">=</span> <span class="s2">&quot;compare -dissimilarity-threshold 1 -fuzz </span><span class="si">#{</span><span class="n">wraith</span><span class="o">.</span><span class="n">fuzz</span><span class="si">}</span><span class="s2"> -metric AE -highlight-color </span><span class="si">#{</span><span class="n">wraith</span><span class="o">.</span><span class="n">highlight_color</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">base</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">compare</span><span class="o">.</span><span class="n">shellescape</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">output</span><span class="si">}</span><span class="s2">&quot;</span>
-  <span class="n">px_value</span> <span class="o">=</span> <span class="no">Open3</span><span class="o">.</span><span class="n">popen3</span><span class="p">(</span><span class="n">cmdline</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">_stdin</span><span class="p">,</span> <span class="n">_stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="p">,</span> <span class="n">_wait_thr</span><span class="o">|</span> <span class="n">stderr</span><span class="o">.</span><span class="n">read</span> <span class="p">}</span><span class="o">.</span><span class="n">to_f</span>
-  <span class="k">begin</span>
-    <span class="n">img_size</span> <span class="o">=</span> <span class="no">ImageSize</span><span class="o">.</span><span class="n">path</span><span class="p">(</span><span class="n">output</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">inject</span><span class="p">(</span><span class="ss">:*</span><span class="p">)</span>
-    <span class="n">percentage</span><span class="p">(</span><span class="n">img_size</span><span class="p">,</span> <span class="n">px_value</span><span class="p">,</span> <span class="n">info</span><span class="p">)</span>
-  <span class="k">rescue</span>
-    <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">info</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span> <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;invalid&quot;</span><span class="p">)</span> <span class="p">}</span> <span class="k">unless</span> <span class="no">File</span><span class="o">.</span><span class="n">exist?</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
-  <span class="k">end</span>
-<span class="k">end</span></code></pre></div>
+<p><code>ruby
+def compare_task(base, compare, output, info)
+  cmdline = "compare -dissimilarity-threshold 1 -fuzz #{wraith.fuzz} -metric AE -highlight-color #{wraith.highlight_color} #{base} #{compare.shellescape} #{output}"
+  px_value = Open3.popen3(cmdline) { |_stdin, _stdout, stderr, _wait_thr| stderr.read }.to_f
+  begin
+    img_size = ImageSize.path(output).size.inject(:*)
+    percentage(img_size, px_value, info)
+  rescue
+    File.open(info, "w") { |file| file.write("invalid") } unless File.exist?(output)
+  end
+end
+</code></p>
 
 <p>ImageMagick の compareコマンドを使っていることがわかりますね。</p>
 
@@ -193,7 +211,7 @@ ruby 2.2.3p173 (2015-08-18 revision 51636) [x86_64-darwin14]
 
 <p>(compareコマンドの使い方調べてないのでわからない)</p>
 
-<h2 id="section-2">最後に</h2>
+<h2 id="section-3">最後に</h2>
 
 <p>単体だと中々使いにくいなという感じがします。</p>
 
