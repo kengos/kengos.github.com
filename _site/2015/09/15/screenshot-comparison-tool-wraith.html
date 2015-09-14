@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>スクリーンショット比較ツール "Wraith"</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css">
+<link rel="stylesheet" href="/css/syntax.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="author" href="https://plus.google.com/102187337938024275663/posts">
+<meta name="google-site-verification" content="0lvnSNpPQpx5PVeFdlOeEGWG4ayedwnXKG3OcQKp_Ys">
+<meta property="og:title" content="スクリーンショット比較ツール "Wraith"">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://kengos.jp/2015/09/15/screenshot-comparison-tool-wraith.html">
+<meta property="og:site_name" content="kengos.jp">
+<meta property="og:locale" content="ja">
+
+<!-- ga -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40855269-1', 'kengos.jp');
+  ga('send', 'pageview');
+</script>
+</head>
+<body>
+<nav id="navigation">
+  <div class="nav-wrapper">
+    <a href="http://kengos.jp/" class="brand-logo">kengos.jp</a>
+    <a href="#" data-activates="mobile-navigation" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="/posts.html">Blog</a></li>
+    </ul>
+    <ul class="side-nav" id="mobile-navigation">
+      <li><a href="/posts.html">Blog</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div id="main" class="row">
+    <div class="col s12">
+      <div class="right-align">
+  <p>2015-09-15</p>
+</div>
+<h2>
+  <a href="/2015/09/15/screenshot-comparison-tool-wraith.html" >スクリーンショット比較ツール "Wraith"</a>
+</h2>
+<div class="right-align tags">
+  Tag:
+  
+  <span class="badge">スクリーンショット比較</span>
+  
+</div>
+<div class="posts">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gE_19L0l2q0" frameborder="0" allowfullscreen=""></iframe>
+
+<h2 id="section">はじめに</h2>
+
+<p>スクリーンショットの比較ツールである <strong>“Wraith”</strong>の紹介です。</p>
+
+<p><a href="https://github.com/BBC-News/wraith">Github</a>
+<a href="http://bbc-news.github.io/wraith/index.html">Document</a></p>
+
+<p>これを利用すると CSSの変更時の見た目の差分のチェックなどができます。</p>
+
+<p><img src="/images/20150915/20150915_1.png" alt="実行後のイメージ" style="max-width:80%;" /></p>
+
+<p>左が 開発環境, 右が今の本番の状態です。</p>
+
+<p><img src="/images/20150915/20150915_2.png" alt="差分表示のイメージ" style="max-width:80%;" /></p>
+
+<p>diff のイメージをクリックすると差分の箇所が青くなっている画像が表示されます。</p>
+
+<p>今回は 表示されている画像の width を 100% にしてしまっていたため、縦長の画像が拡大されすぎていたのを修正しました。</p>
+
+<p>1/6 ほど幅が狭くなっている感じですね。</p>
+
+<h2 id="section-1">インストール</h2>
+
+<p>OS X 10.10 系 + <a href="http://brew.sh/index_ja.html">homebrew</a> の環境でインストールしていきます。</p>
+
+<p><code>sh
+$ brew -v
+Homebrew 0.9.5 (git revision 4c6e7; last commit 2015-09-12)
+$ ruby -v
+ruby 2.2.3p173 (2015-08-18 revision 51636) [x86_64-darwin14]
+</code></p>
+
+<h3 id="phantomjs-imagemagick-">phantomjs, imagemagick のインストール</h3>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>brew install phantomjs imagemagick</code></pre></div>
+
+<p>(すでに入っていたので,入っていない場合の挙動は不明)</p>
+
+<h3 id="wraith-">Wraith のインストール</h3>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>gem install wraith</code></pre></div>
+
+<p>rbenv の場合は <code>rehash</code> すること</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>rbenv rehash</code></pre></div>
+
+<h2 id="wraith--1">Wraith の設定</h2>
+
+<p>任意のディレクトリを作成して、そこに移動して作業します。</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>mkdir -p ~/wraith
+<span class="nv">$ </span><span class="nb">cd</span> ~/wraith</code></pre></div>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>wraith setup</code></pre></div>
+
+<p>configs/config.yaml というファイルができています。</p>
+
+<p>そのファイルに設定をいれていきます。</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>vi configs/config.yaml</code></pre></div>
+
+<p>下のような感じで設定しました。</p>
+
+<p>ポイントとなるのは <strong>domains</strong>, <strong>screen_widths</strong>, <strong>paths</strong> でしょうか。</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">browser</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">phantomjs</span><span class="p-Indicator">:</span> <span class="s">&quot;phantomjs&quot;</span>
+
+<span class="l-Scalar-Plain">snap_file</span><span class="p-Indicator">:</span> <span class="s">&quot;javascript/snap.js&quot;</span>
+
+<span class="l-Scalar-Plain">directory</span><span class="p-Indicator">:</span> <span class="s">&#39;shots&#39;</span>
+
+<span class="l-Scalar-Plain">domains</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span> <span class="s">&quot;http://kengos.jp&quot;</span> <span class="c1"># 元となるページのドメイン</span>
+  <span class="l-Scalar-Plain">develpoment</span><span class="p-Indicator">:</span> <span class="s">&quot;http://localhost:4000&quot;</span> <span class="c1"># 比較したいページのドメイン</span>
+
+<span class="c1"># チェックしたい画面幅(この場合は 320px, 600px, 1280px の3種類)</span>
+<span class="l-Scalar-Plain">screen_widths</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">320</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">600</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">1280</span>
+
+<span class="c1"># チェックするパス</span>
+<span class="c1"># この場合は &quot;/&quot; と &quot;/2015/09/13/password.html&quot; の 2つのパス</span>
+<span class="l-Scalar-Plain">paths</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">home</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/</span>
+  <span class="l-Scalar-Plain">2015_09_13</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/2015/09/13/password.html</span>
+
+<span class="l-Scalar-Plain">fuzz</span><span class="p-Indicator">:</span> <span class="s">&#39;20%&#39;</span>
+
+<span class="l-Scalar-Plain">spider_days</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">10</span>
+
+<span class="l-Scalar-Plain">mode</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">diffs_first</span>
+
+<span class="l-Scalar-Plain">threshold</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">5</span></code></pre></div>
+
+<h2 id="wraith--2">Wraith の実行</h2>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>wraith capture configs/config.yaml</code></pre></div>
+
+<p>しばらく待つと 以下のように <strong>shots</strong> というディレクトリができ、内部に画像ができています。</p>
+
+<p><img src="/images/20150915/20150915_3.png" alt="ディレクトリ構造" style="max-width:100%;" /></p>
+
+<p><strong>gallery.html</strong>をブラウザで開くことで、冒頭の画像が表示されます。</p>
+
+<h2 id="compare">どうやって Compareしているの？</h2>
+
+<p>Capture程度であれば phantomjs を簡単に触ればできてしまいます。</p>
+
+<p>一番気になったのが, Compareのやり方。</p>
+
+<p>Openソースなので ソースコードを見ればわかる！っていうのがいいですよね。</p>
+
+<p><a href="https://github.com/BBC-News/wraith/blob/master/lib/wraith/compare_images.rb#L30">Compareの該当ソースの場所</a></p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">compare_task</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">compare</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">info</span><span class="p">)</span>
+  <span class="n">cmdline</span> <span class="o">=</span> <span class="s2">&quot;compare -dissimilarity-threshold 1 -fuzz </span><span class="si">#{</span><span class="n">wraith</span><span class="o">.</span><span class="n">fuzz</span><span class="si">}</span><span class="s2"> -metric AE -highlight-color </span><span class="si">#{</span><span class="n">wraith</span><span class="o">.</span><span class="n">highlight_color</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">base</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">compare</span><span class="o">.</span><span class="n">shellescape</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">output</span><span class="si">}</span><span class="s2">&quot;</span>
+  <span class="n">px_value</span> <span class="o">=</span> <span class="no">Open3</span><span class="o">.</span><span class="n">popen3</span><span class="p">(</span><span class="n">cmdline</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">_stdin</span><span class="p">,</span> <span class="n">_stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="p">,</span> <span class="n">_wait_thr</span><span class="o">|</span> <span class="n">stderr</span><span class="o">.</span><span class="n">read</span> <span class="p">}</span><span class="o">.</span><span class="n">to_f</span>
+  <span class="k">begin</span>
+    <span class="n">img_size</span> <span class="o">=</span> <span class="no">ImageSize</span><span class="o">.</span><span class="n">path</span><span class="p">(</span><span class="n">output</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">inject</span><span class="p">(</span><span class="ss">:*</span><span class="p">)</span>
+    <span class="n">percentage</span><span class="p">(</span><span class="n">img_size</span><span class="p">,</span> <span class="n">px_value</span><span class="p">,</span> <span class="n">info</span><span class="p">)</span>
+  <span class="k">rescue</span>
+    <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">info</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span> <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;invalid&quot;</span><span class="p">)</span> <span class="p">}</span> <span class="k">unless</span> <span class="no">File</span><span class="o">.</span><span class="n">exist?</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
+
+<p>ImageMagick の compareコマンドを使っていることがわかりますね。</p>
+
+<p><a href="http://www.imagemagick.org/script/compare.php">ImageMagick-compare</a></p>
+
+<p>該当のソースの箇所のオプション値を調整/変更することで、自分のサイトに合った調整にできるかもしれないですね。</p>
+
+<p>(compareコマンドの使い方調べてないのでわからない)</p>
+
+<h2 id="section-2">最後に</h2>
+
+<p>単体だと中々使いにくいなという感じがします。</p>
+
+<p>CI に組み込んだり、Wraith をライブラリとして利用した簡単なWebアプリケーションを作り、</p>
+
+<p>簡単に設定、実行できるようにしたりなどするといい感じになるかもしれませんね。</p>
+
+</div>
+    </div>
+  </div>
+</div>
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div id="social-button"></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">&copy; kengos 2013</div>
+  </div>
+</footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="/js/jquery.popn-socialbutton.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+<script>
+(function($){
+  $('#social-button').popnSocialButton([ 'twitter', 'facebook', 'hatebu', 'gplus', 'pocket' ]);
+  $(".button-collapse").sideNav();
+})(jQuery);
+</script>
+</body>
+</html>
