@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hamamatsu.rb#58(浜松Ruby#58) に参加しました</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/syntax.css">
+<link rel="author" href="https://plus.google.com/102187337938024275663/posts">
+<meta name="google-site-verification" content="0lvnSNpPQpx5PVeFdlOeEGWG4ayedwnXKG3OcQKp_Ys">
+<meta property="og:title" content="Hamamatsu.rb#58(浜松Ruby#58) に参加しました">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://kengos.jp/2015/11/12/hmrb-58.html">
+<meta property="og:site_name" content="kengos.jp">
+<meta property="og:locale" content="ja">
+
+<!-- ga -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40855269-1', 'kengos.jp');
+  ga('send', 'pageview');
+</script>
+</head>
+<body>
+<nav id="navigation">
+  <div class="nav-wrapper">
+    <a href="http://kengos.jp/" class="brand-logo">kengos.jp</a>
+    <a href="#" data-activates="mobile-navigation" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="/posts.html">Blog</a></li>
+    </ul>
+    <ul class="side-nav" id="mobile-navigation">
+      <li><a href="/posts.html">Blog</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div id="main" class="row">
+    <div class="col s12">
+      <div class="right-align">
+  <p>2015-11-12</p>
+</div>
+<h2>
+  <a href="/2015/11/12/hmrb-58.html" >Hamamatsu.rb#58(浜松Ruby#58) に参加しました</a>
+</h2>
+<div class="right-align tags">
+  Tag:
+  
+  <span class="badge">Hamamatsu.rb</span>
+  
+</div>
+<div class="posts">
+<p>今回は人数が多く28名が参加しました。</p>
+
+<p>前回は12名でしたので倍増ですね！</p>
+
+<p>(ちなみに前回は<a href="https://hmrb.doorkeeper.jp/" target="_blank">Doorkeeper</a>で参加申請し忘れていました)</p>
+
+<h3 id="section">やったこと</h3>
+
+<ol>
+  <li>自己紹介</li>
+  <li>Rubyでお題を解く</li>
+  <li>LT</li>
+  <li>KPT</li>
+</ol>
+
+<h2 id="section-1">自己紹介</h2>
+
+<p>19:10頃到着でしたので、殆どの方の自己紹介が終わっていました。</p>
+
+<h2 id="ruby">Rubyでお題を解く</h2>
+
+<p>こんなお題を解きました。</p>
+
+<blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">今日のお題　<a href="https://t.co/zWxeiENYgi">https://t.co/zWxeiENYgi</a>　 <a href="https://twitter.com/hashtag/hmrb?src=hash">#hmrb</a></p>&mdash; yuto (@jacoyutorius) <a href="https://twitter.com/jacoyutorius/status/664388030975750144">2015, 11月 11</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>とりあえず時間内に作ったのがこれです。</p>
+
+<p>問題をモデル化して、<code>(1..8).to_a</code> を shuffleして渡してあげるだけです。データ数が少なかったのでコレでも問題なく解答が出ました。</p>
+
+<script src="https://gist.github.com/kengos/ad1b9f34f2d2779b5d7f.js"></script>
+
+<h3 id="section-2">別の解法</h3>
+
+<p>総当りでやっている方が多かったようです。</p>
+
+<p>なんだかなーと思ったので、学生の頃ちらっと触った <strong>Genetic Algorithms</strong> で解いてみよう!</p>
+
+<p>と思いつき、先ほどガーッと書いたのがこちら(汚いので誰かリファクタリングを…)</p>
+
+<p>一応答えでたけど、やり方合ってるのかな…</p>
+
+<p>Genetic Algorithms とか覚えていないので、<a href="http://mikilab.doshisha.ac.jp/dia/research/pdga/research.html" target="_blank">http://mikilab.doshisha.ac.jp/dia/research/pdga/research.html</a>を参考になんとなく想像しながら書きました。</p>
+
+<script src="https://gist.github.com/kengos/274f6fb44d6c30f2cba5.js"></script>
+
+<h2 id="lt">LT</h2>
+
+<h3 id="a-hrefhttpshizuoka-app-awardsjp-targetblanka"><a href="http://shizuoka-app-awards.jp/" target="_blank">シズオカアプリコンテスト</a>のご紹介</h3>
+
+<p>静岡市が保有しているオープンデータを公開し、なんかそれでアプリ作って！っていうイベントのようです。</p>
+
+<p>参加登録すると 50$ 分のAWSのチケットが貰えるようです。</p>
+
+<p>なんか人口減ってて70万人切ると政令指定都市ではなくなるとかなんとか…</p>
+
+<p>あとすみませんが、&lt;a href=”http://shippei.jp/ target=”_blank”&gt;しっぺいくん派&lt;/a&gt;なので</p>
+
+<h3 id="android-">日本Androidの会 浜松支部からの告知</h3>
+
+<p>今年は金沢でABCDやるみたいですよ！</p>
+
+<h3 id="a-hrefhttpsshizuniltdoorkeeperjpevents33522-targetblankosc2016lt-a"><a href="https://shizunilt.doorkeeper.jp/events/33522" target="_blank">静大情報&amp;OSC浜名湖2016プレカンファレンス合同LT大会 の告知</a></h3>
+
+<p>11/21 開催です!</p>
+
+<h3 id="a-hrefhttpsgithubcomitamae-kitchenitamae-tagetblankitamaea"><a href="https://github.com/itamae-kitchen/itamae" taget="_blank">itamae</a>のお話</h3>
+
+<p>一気に変わって 技術系LT</p>
+
+<h3 id="lthttpstwittercommackato">飛び込みLT(https://twitter.com/mackato)</h3>
+
+<p>何故か Swift トーク!!</p>
+
+<p>でも HipFace.app 面白いっす(&lt;= リンク先待ち)</p>
+
+</div>
+    </div>
+  </div>
+</div>
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div id="social-button"></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">&copy; kengos 2013</div>
+  </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+<script src="/js/jquery.popn-socialbutton.js"></script>
+<script>
+(function($){
+  $('#social-button').popnSocialButton([ 'twitter', 'facebook', 'hatebu', 'gplus', 'pocket' ]);
+  $(".button-collapse").sideNav();
+})(jQuery);
+</script>
+</body>
+</html>
