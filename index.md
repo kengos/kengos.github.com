@@ -4,7 +4,7 @@ title: kengos.jp
 ---
 
 <div class="ui grid">
-  <div class="four wide column">
+  <div class="eight wide column">
     <div class="ui card">
       <div class="ui image">
         <img src="https://secure.gravatar.com/avatar/b174d36c06092278c3cf4d807c99291a?s=200" alt="icon">
