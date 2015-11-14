@@ -20,6 +20,10 @@ article#main {
   padding-bottom: 47px;
 }
 
+div.social {
+  margin-top: 2em;
+}
+
 #footer {
   width: 100%;
   height: 47px;

@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chart.js line sample</title>
+<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" class="ui" href="/assets/css/semantic.min.css">
 <link rel="stylesheet" href="/assets/css/railscasts.css">
 <link rel="stylesheet" href="/assets/css/main.css">
@@ -16,6 +17,15 @@
 <meta property="og:locale" content="ja">
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <header id="navigation">
   <div class="ui fixed inverted menu">
     <div class="ui container">
@@ -68,6 +78,10 @@
 
 <p class="note">Note: Tooltip support: <a href="https://github.com/nnnick/Chart.js/pull/51" target="_blank">https://github.com/nnnick/Chart.js/pull/51</a></p>
 
+</div>
+
+<div style="margin-top: 2em;">
+  <div class="fb-comments" data-href="http://kengos.jp/2013/04/04/chartjs-line-sample.html" data-width="100%" data-numposts="3"></div>
 </div>
   </div>
 </article>
