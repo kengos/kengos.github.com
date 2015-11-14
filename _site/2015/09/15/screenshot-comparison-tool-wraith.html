@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>スクリーンショット比較ツール "Wraith"</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
-<link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/syntax.css">
+<link rel="stylesheet" type="text/css" class="ui" href="/assets/css/semantic.min.css">
+<link rel="stylesheet" href="/assets/css/railscasts.css">
+<link rel="stylesheet" href="/assets/css/main.css">
 <link rel="author" href="https://plus.google.com/102187337938024275663/posts">
 <meta name="google-site-verification" content="0lvnSNpPQpx5PVeFdlOeEGWG4ayedwnXKG3OcQKp_Ys">
 <meta property="og:title" content="スクリーンショット比較ツール "Wraith"">
@@ -14,45 +14,38 @@
 <meta property="og:url" content="http://kengos.jp/2015/09/15/screenshot-comparison-tool-wraith.html">
 <meta property="og:site_name" content="kengos.jp">
 <meta property="og:locale" content="ja">
-
-<!-- ga -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-40855269-1', 'kengos.jp');
-  ga('send', 'pageview');
-</script>
 </head>
 <body>
-<nav id="navigation">
-  <div class="nav-wrapper">
-    <a href="http://kengos.jp/" class="brand-logo">kengos.jp</a>
-    <a href="#" data-activates="mobile-navigation" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="/posts.html">Blog</a></li>
-    </ul>
-    <ul class="side-nav" id="mobile-navigation">
-      <li><a href="/posts.html">Blog</a></li>
-    </ul>
+<header id="navigation">
+  <div class="ui fixed inverted menu">
+    <div class="ui container">
+      <a href="/" class="header item">
+        <img class="logo" src="//secure.gravatar.com/avatar/b174d36c06092278c3cf4d807c99291a?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png">
+        kengos.jp
+      </a>
+      <a href="/posts.html" class="item">Blog</a>
+    </div>
   </div>
-</nav>
-<div class="container">
-  <div id="main" class="row">
-    <div class="col s12">
-      <div class="right-align">
-  <p>2015-09-15</p>
-</div>
-<h2>
+</header>
+
+<article id="main">
+  <div class="ui main container">
+    <h1 class="ui header">
   <a href="/2015/09/15/screenshot-comparison-tool-wraith.html" >スクリーンショット比較ツール "Wraith"</a>
-</h2>
-<div class="right-align tags">
-  Tag:
-  
-  <span class="badge">スクリーンショット比較</span>
-  
+</h1>
+<div class="ui two column grid">
+  <div class="row">
+    <div class="column">
+      <div class="ui sub header">2015-09-15</div>
+    </div>
+    <div class="column">
+      <div class="ui right aligned sub header">
+        
+          <span class="ui tag label" style="margin-right: 0.5em;">スクリーンショット比較</span>
+        
+      </div>
+    </div>
+  </div>
 </div>
 <div class="posts">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gE_19L0l2q0" frameborder="0" allowfullscreen=""></iframe>
@@ -66,11 +59,11 @@
 
 <p>これを利用すると CSSの変更時の見た目の差分のチェックなどができます。</p>
 
-<p><img src="/images/20150915/20150915_1.png" alt="実行後のイメージ" style="max-width:80%;" /></p>
+<p><img src="/assets/images/20150915/20150915_1.png" alt="実行後のイメージ" style="max-width:80%;" /></p>
 
 <p>左が 開発環境, 右が今の本番の状態です。</p>
 
-<p><img src="/images/20150915/20150915_2.png" alt="差分表示のイメージ" style="max-width:80%;" /></p>
+<p><img src="/assets/images/20150915/20150915_2.png" alt="差分表示のイメージ" style="max-width:80%;" /></p>
 
 <p>diff のイメージをクリックすると差分の箇所が青くなっている画像が表示されます。</p>
 
@@ -176,7 +169,7 @@ ruby 2.2.3p173 <span class="o">(</span>2015-08-18 revision 51636<span class="o">
 
 <p>しばらく待つと 以下のように <strong>shots</strong> というディレクトリができ、内部に画像ができています。</p>
 
-<p><img src="/images/20150915/20150915_3.png" alt="ディレクトリ構造" style="max-width:100%;" /></p>
+<p><img src="/assets/images/20150915/20150915_3.png" alt="ディレクトリ構造" style="max-width:100%;" /></p>
 
 <p><strong>gallery.html</strong>をブラウザで開くことで、冒頭の画像が表示されます。</p>
 
@@ -220,29 +213,30 @@ ruby 2.2.3p173 <span class="o">(</span>2015-08-18 revision 51636<span class="o">
 <p>簡単に設定、実行できるようにしたりなどするといい感じになるかもしれませんね。</p>
 
 </div>
-    </div>
   </div>
-</div>
-<footer class="page-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col s12">
-        <div id="social-button"></div>
-      </div>
+</article>
+
+<footer id="footer">
+  <div id="footer-content" class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+      <p>&copy; kengos.jp 2013</p>
     </div>
-  </div>
-  <div class="footer-copyright">
-    <div class="container">&copy; kengos 2013</div>
   </div>
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
-<script src="/js/jquery.popn-socialbutton.js"></script>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="/assets/js/semantic.min.js"></script>
+<script src="/assets/js/highlight.8.9.1.min.js"></script>
+<script src="/assets/js/application.js"></script>
 <script>
-(function($){
-  $('#social-button').popnSocialButton([ 'twitter', 'facebook', 'hatebu', 'gplus', 'pocket' ]);
-  $(".button-collapse").sideNav();
-})(jQuery);
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40855269-1', 'kengos.jp');
+  ga('send', 'pageview');
 </script>
+
 </body>
 </html>

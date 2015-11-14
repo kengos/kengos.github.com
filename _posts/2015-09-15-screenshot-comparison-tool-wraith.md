@@ -16,11 +16,11 @@ tags: [スクリーンショット比較]
 
 これを利用すると CSSの変更時の見た目の差分のチェックなどができます。
 
-<img src="/images/20150915/20150915_1.png" alt="実行後のイメージ" style="max-width:80%;" />
+<img src="/assets/images/20150915/20150915_1.png" alt="実行後のイメージ" style="max-width:80%;" />
 
 左が 開発環境, 右が今の本番の状態です。
 
-<img src="/images/20150915/20150915_2.png" alt="差分表示のイメージ" style="max-width:80%;" />
+<img src="/assets/images/20150915/20150915_2.png" alt="差分表示のイメージ" style="max-width:80%;" />
 
 diff のイメージをクリックすると差分の箇所が青くなっている画像が表示されます。
 
@@ -126,7 +126,7 @@ $ wraith capture configs/config.yaml
 
 しばらく待つと 以下のように <strong>shots</strong> というディレクトリができ、内部に画像ができています。
 
-<img src="/images/20150915/20150915_3.png" alt="ディレクトリ構造" style="max-width:100%;" />
+<img src="/assets/images/20150915/20150915_3.png" alt="ディレクトリ構造" style="max-width:100%;" />
 
 <strong>gallery.html</strong>をブラウザで開くことで、冒頭の画像が表示されます。
 

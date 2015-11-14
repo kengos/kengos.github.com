@@ -1,17 +1,23 @@
 ---
 layout: default
 ---
-<div class="right-align">
-  <p>{{ page.date | date: "%Y-%m-%d" }}</p>
-</div>
-<h2>
+
+<h1 class="ui header">
   <a href="{{ page.url }}" >{{ page.title }}</a>
-</h2>
-<div class="right-align tags">
-  Tag:
-  {% for tag in page.tags %}
-  <span class="badge">{{ tag }}</span>
-  {% endfor %}
+</h1>
+<div class="ui two column grid">
+  <div class="row">
+    <div class="column">
+      <div class="ui sub header">{{ page.date | date: "%Y-%m-%d" }}</div>
+    </div>
+    <div class="column">
+      <div class="ui right aligned sub header">
+        {% for tag in page.tags %}
+          <span class="ui tag label" style="margin-right: 0.5em;">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
 <div class="posts">
 {{ content }}

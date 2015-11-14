@@ -3,19 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ブログ一覧</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
-<link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/syntax.css">
+<title>ブログ投稿一覧</title>
+<link rel="stylesheet" type="text/css" class="ui" href="/assets/css/semantic.min.css">
+<link rel="stylesheet" href="/assets/css/railscasts.css">
+<link rel="stylesheet" href="/assets/css/main.css">
 <link rel="author" href="https://plus.google.com/102187337938024275663/posts">
 <meta name="google-site-verification" content="0lvnSNpPQpx5PVeFdlOeEGWG4ayedwnXKG3OcQKp_Ys">
-<meta property="og:title" content="ブログ一覧">
+<meta property="og:title" content="ブログ投稿一覧">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://kengos.jp/posts.html">
 <meta property="og:site_name" content="kengos.jp">
 <meta property="og:locale" content="ja">
+</head>
+<body>
+<header id="navigation">
+  <div class="ui fixed inverted menu">
+    <div class="ui container">
+      <a href="/" class="header item">
+        <img class="logo" src="//secure.gravatar.com/avatar/b174d36c06092278c3cf4d807c99291a?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png">
+        kengos.jp
+      </a>
+      <a href="/posts.html" class="item">Blog</a>
+    </div>
+  </div>
+</header>
 
-<!-- ga -->
+<article id="main">
+  <div class="ui main container">
+    <h2 id="section">ブログ投稿一覧</h2>
+
+<div id="post-list">
+  <div class="ui very relaxed divided list">
+  
+    <div class="item">
+      <div class="content">
+        <a class="header" href="/2015/11/12/hmrb-58.html">Hamamatsu.rb#58(浜松Ruby#58) に参加しました</a>
+        <div class="description">2015-11-12</div>
+      </div>
+    </div>
+  
+    <div class="item">
+      <div class="content">
+        <a class="header" href="/2015/09/15/screenshot-comparison-tool-wraith.html">スクリーンショット比較ツール "Wraith"</a>
+        <div class="description">2015-09-15</div>
+      </div>
+    </div>
+  
+    <div class="item">
+      <div class="content">
+        <a class="header" href="/2015/09/13/password.html">パスワード保存方法の過去と現在そして未来</a>
+        <div class="description">2015-09-13</div>
+      </div>
+    </div>
+  
+    <div class="item">
+      <div class="content">
+        <a class="header" href="/2015/03/28/hamamatsu-ruby-kaigi-01.html">浜松Ruby会議01 感想文</a>
+        <div class="description">2015-03-28</div>
+      </div>
+    </div>
+  
+    <div class="item">
+      <div class="content">
+        <a class="header" href="/2013/05/13/ab-test-1.html">そのABテスト正しいですか?</a>
+        <div class="description">2013-05-13</div>
+      </div>
+    </div>
+  
+    <div class="item">
+      <div class="content">
+        <a class="header" href="/2013/04/04/chartjs-line-sample.html">Chart.js line sample</a>
+        <div class="description">2013-04-04</div>
+      </div>
+    </div>
+  
+  </div>
+</div>
+
+  </div>
+</article>
+
+<footer id="footer">
+  <div id="footer-content" class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+      <p>&copy; kengos.jp 2013</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="/assets/js/semantic.min.js"></script>
+<script src="/assets/js/highlight.8.9.1.min.js"></script>
+<script src="/assets/js/application.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -25,64 +104,6 @@
   ga('create', 'UA-40855269-1', 'kengos.jp');
   ga('send', 'pageview');
 </script>
-</head>
-<body>
-<nav id="navigation">
-  <div class="nav-wrapper">
-    <a href="http://kengos.jp/" class="brand-logo">kengos.jp</a>
-    <a href="#" data-activates="mobile-navigation" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="/posts.html">Blog</a></li>
-    </ul>
-    <ul class="side-nav" id="mobile-navigation">
-      <li><a href="/posts.html">Blog</a></li>
-    </ul>
-  </div>
-</nav>
-<div class="container">
-  <div id="main" class="row">
-    <div class="col s12">
-      <div id="post-list">
-<div id="post-items" class="collection collection-post">
 
-  <a href="/2015/11/12/hmrb-58.html" class="collection-item">12 November 2015 : Hamamatsu.rb#58(浜松Ruby#58) に参加しました</a>
-
-  <a href="/2015/09/15/screenshot-comparison-tool-wraith.html" class="collection-item">15 September 2015 : スクリーンショット比較ツール "Wraith"</a>
-
-  <a href="/2015/09/13/password.html" class="collection-item">13 September 2015 : パスワード保存方法の過去と現在そして未来</a>
-
-  <a href="/2015/03/28/hamamatsu-ruby-kaigi-01.html" class="collection-item">28 March 2015 : 浜松Ruby会議01 感想文</a>
-
-  <a href="/2013/05/13/ab-test-1.html" class="collection-item">13 May 2013 : そのABテスト正しいですか?</a>
-
-  <a href="/2013/04/04/chartjs-line-sample.html" class="collection-item">04 April 2013 : Chart.js line sample</a>
-
-</div>
-</div>
-
-    </div>
-  </div>
-</div>
-<footer class="page-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col s12">
-        <div id="social-button"></div>
-      </div>
-    </div>
-  </div>
-  <div class="footer-copyright">
-    <div class="container">&copy; kengos 2013</div>
-  </div>
-</footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
-<script src="/js/jquery.popn-socialbutton.js"></script>
-<script>
-(function($){
-  $('#social-button').popnSocialButton([ 'twitter', 'facebook', 'hatebu', 'gplus', 'pocket' ]);
-  $(".button-collapse").sideNav();
-})(jQuery);
-</script>
 </body>
 </html>

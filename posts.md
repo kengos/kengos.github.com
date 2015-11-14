@@ -1,11 +1,19 @@
 ---
 layout: default
-title: ブログ一覧
+title: ブログ投稿一覧
 ---
+
+## ブログ投稿一覧
+
 <div id="post-list">
-<div id="post-items" class="collection collection-post">
-{% for post in site.posts %}
-  <a href="{{ post.url }}" class="collection-item">{{ post.date | date_to_long_string }} : {{ post.title }}</a>
-{% endfor %}
-</div>
+  <div class="ui very relaxed divided list">
+  {% for post in site.posts %}
+    <div class="item">
+      <div class="content">
+        <a class="header" href="{{ post.url }}">{{ post.title }}</a>
+        <div class="description">{{ post.date | date: "%Y-%m-%d" }}</div>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
 </div>

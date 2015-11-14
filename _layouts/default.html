@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ page.title }}</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
-<link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/syntax.css">
+<link rel="stylesheet" type="text/css" class="ui" href="/assets/css/semantic.min.css">
+<link rel="stylesheet" href="/assets/css/railscasts.css">
+<link rel="stylesheet" href="/assets/css/main.css">
 <link rel="author" href="https://plus.google.com/102187337938024275663/posts">
 <meta name="google-site-verification" content="0lvnSNpPQpx5PVeFdlOeEGWG4ayedwnXKG3OcQKp_Ys">
 <meta property="og:title" content="{{ page.title }}">
@@ -14,10 +14,38 @@
 <meta property="og:url" content="http://kengos.jp{{ page.url }}">
 <meta property="og:site_name" content="kengos.jp">
 <meta property="og:locale" content="ja">
-{% for js in page.js_files %}
-<script src="/js/{{ js }}"></script>
-{% endfor %}
-<!-- ga -->
+</head>
+<body>
+<header id="navigation">
+  <div class="ui fixed inverted menu">
+    <div class="ui container">
+      <a href="/" class="header item">
+        <img class="logo" src="//secure.gravatar.com/avatar/b174d36c06092278c3cf4d807c99291a?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png">
+        kengos.jp
+      </a>
+      <a href="/posts.html" class="item">Blog</a>
+    </div>
+  </div>
+</header>
+
+<article id="main">
+  <div class="ui main container">
+    {{ content }}
+  </div>
+</article>
+
+<footer id="footer">
+  <div id="footer-content" class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+      <p>&copy; kengos.jp 2013</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="/assets/js/semantic.min.js"></script>
+<script src="/assets/js/highlight.8.9.1.min.js"></script>
+<script src="/assets/js/application.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -27,47 +55,8 @@
   ga('create', 'UA-40855269-1', 'kengos.jp');
   ga('send', 'pageview');
 </script>
-</head>
-<body>
-<nav id="navigation">
-  <div class="nav-wrapper">
-    <a href="http://kengos.jp/" class="brand-logo">kengos.jp</a>
-    <a href="#" data-activates="mobile-navigation" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="/posts.html">Blog</a></li>
-    </ul>
-    <ul class="side-nav" id="mobile-navigation">
-      <li><a href="/posts.html">Blog</a></li>
-    </ul>
-  </div>
-</nav>
-<div class="container">
-  <div id="main" class="row">
-    <div class="col s12">
-      {{ content }}
-    </div>
-  </div>
-</div>
-<footer class="page-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col s12">
-        <div id="social-button"></div>
-      </div>
-    </div>
-  </div>
-  <div class="footer-copyright">
-    <div class="container">&copy; kengos 2013</div>
-  </div>
-</footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
-<script src="/js/jquery.popn-socialbutton.js"></script>
-<script>
-(function($){
-  $('#social-button').popnSocialButton([ 'twitter', 'facebook', 'hatebu', 'gplus', 'pocket' ]);
-  $(".button-collapse").sideNav();
-})(jQuery);
-</script>
+{% for js in page.js_files %}
+<script src="/assets/js/{{ js }}"></script>
+{% endfor %}
 </body>
 </html>
