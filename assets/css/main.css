@@ -1,5 +1,7 @@
 html, body {
   height: 100%;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 header#navigation .ui.menu, footer#footer .ui.footer {

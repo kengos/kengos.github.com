@@ -49,7 +49,7 @@ layout: default
     </li>
     <li>
       <a class="sns-pocket sns-link"
-        href="http://getpocket.com/edit?url=http%3A%2F%2Fkengos.jp{{ page.url | cgi_escape }}&title={{ page.title || cgi_escape }}"
+        href="http://getpocket.com/edit?url=http%3A%2F%2Fkengos.jp{{ page.url | cgi_escape }}&title={{ page.title | cgi_escape }}"
         onclick="window.open(this.href, 'pocket_window', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
         >
         <i class="icon"><img src="/assets/images/pocket.png" width="100%"></i>
